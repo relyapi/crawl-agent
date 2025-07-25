@@ -9,4 +9,5 @@
 3. 承接 windows-agent android-aegnt chrome-agent
 4. 进接收 执行 上报状态  不在客户端进行任何锁操作  所有的操作均在 crawl-agent进行
 5. 插件管理
+6. 整合AI能力
 ```
