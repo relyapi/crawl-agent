@@ -20,8 +20,8 @@ class DrissionPageBase:
     def __init__(self):
         self.page = None
 
-    def start(self, user_data_path=None, proxy=None, is_max=True):
-        co = ChromiumOptions().set_paths(user_data_path=user_data_path)
+    def start(self, browser_path=None, user_data_path=None, proxy=None, is_max=True):
+        co = ChromiumOptions().set_paths(browser_path=browser_path, user_data_path=user_data_path)
         if proxy:
             co.set_proxy(proxy)
 

@@ -1,6 +1,6 @@
-from app.task.model.task import TaskInfo, TaskType
-from app.task.server import sio
 from fastapi import APIRouter, Request
+
+from app.task.server import sio
 
 router = APIRouter(
     prefix='/account',
@@ -16,5 +16,5 @@ async def dispatch(request: Request):
     """
     # 需要知道是那个 sid  account和sid 对应关系
     # to=sid 不指定全部
-    await sio.emit('task', TaskInfo(task_type=TaskType.LOGIN).model_dump())
+    await sio.emit('task', {})
     return 'ok'

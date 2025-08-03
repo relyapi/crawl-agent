@@ -1,22 +1,22 @@
 from fastapi import APIRouter, Request
 
 router = APIRouter(
-    prefix='/proxy',
-    tags=['代理服务'],
+    prefix='/plugin',
+    tags=['插件服务'],
     responses={404: {'description': 'Not found'}},
 )
 
 
-@router.post("/fetch")
+@router.post("/upload")
 async def fetch(request: Request):
     """
-    获取代理
+    插件上传
     """
     pass
 
 
-@router.get("/config")
+@router.get("/download")
 async def config(request: Request):
     """
-    代理配置
+    插件下载
     """
