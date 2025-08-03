@@ -18,7 +18,7 @@ FROM base AS packages
 
 # Install Python dependencies
 COPY pyproject.toml poetry.lock ./
-RUN poetry install --sync --no-cache --no-root
+RUN poetry install --no-root
 
 # production stage
 FROM base AS production
