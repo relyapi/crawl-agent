@@ -41,4 +41,4 @@ ENV PATH="${VIRTUAL_ENV}/bin:${PATH}"
 COPY . /app/api
 
 # cmd
-ENTRYPOINT ["uvicorn", "main:app", "--workers", "1", "--host", "0.0.0.0", "--port", "8000"]
+ENTRYPOINT ["uvicorn", "main:socketio_app", "--workers", "1", "--host", "0.0.0.0", "--port", "8000"]
