@@ -5,7 +5,7 @@ from fastapi import FastAPI
 from app.router import router
 from app.task.server import sio
 
-app = FastAPI(root_path='/rely/server')
+app = FastAPI(root_path='/agent/crawl')
 socketio_app = socketio.ASGIApp(sio, app)
 
 

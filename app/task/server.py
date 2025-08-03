@@ -1,6 +1,7 @@
 import socketio
-from app.task.model.device import RegisterModel
 from loguru import logger
+
+from app.task.model.device import RegisterModel
 
 sio = socketio.AsyncServer(
     # 兼容分布式场景
@@ -25,7 +26,7 @@ async def disconnect(sid: str):
 @sio.event
 async def register(sid, data):
     """
-    设备连接，向server发送注册信息
+    设备连接，接收客户端的注册信息
     """
     data = RegisterModel(**data)
     logger.info(f'Client {sid} registered: {data}')
